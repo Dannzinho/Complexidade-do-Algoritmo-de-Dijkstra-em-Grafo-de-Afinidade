@@ -12,6 +12,7 @@
 | Projeto de Pesquisa / IC | Aplicação e análise de complexidade do algoritmo de caminho mínimo em grafos de afinidade |
 | Orientadora | Andrea Ono Sakai |
 | Data de entrega desta etapa | 18/08/2026 |
+| Revisão após parecer da orientadora | 19/09/2026 |
 | Integrantes do grupo | Daniel Vieira Santos | Kevin dos Santos Vieira | Eduardo Alves dos Reis |
 
 ---
@@ -27,6 +28,12 @@ Complexidade de algoritmos em grafos, mais especificamente algoritmos de caminho
 *Escreva o tema já delimitado, de forma específica — não o tema amplo. Lembre-se: o tema deve ser enunciado em 1 a 2 frases, como um assunto (ainda não é uma pergunta de pesquisa, isso vem na etapa "c").*
 
 > **Tema:** Aplicação e análise de complexidade do algoritmo de caminho mínimo em grafos (Dijkstra) no Player2, aplicativo de recomendação que sugere usuários com maior afinidade entre si. O foco é entender como o algoritmo se comporta à medida que o grafo de afinidade cresce, comparando o crescimento teórico previsto pela notação assintótica com o tempo de execução medido na prática.
+
+### 2.2.1 Natureza da pesquisa: revisão da literatura e medição no Player2
+
+O trabalho é, antes de tudo, uma revisão bibliográfica. A base da pesquisa é o que a literatura já estabeleceu sobre a complexidade do Dijkstra (limites teóricos, papel da fila de prioridade e resultados de avaliações experimentais publicadas). Essa parte é feita a partir dos artigos selecionados na etapa (b) e do fichamento.
+
+A medição no Player2 é um complemento. O grupo vai rodar o Dijkstra do próprio sistema em grafos de afinidade de tamanhos diferentes e comparar os tempos com o que a revisão aponta. Essa medição não substitui o fichamento nem a revisão, só serve como estudo de caso para ilustrar e discutir o que foi levantado na literatura.
 
 ### 2.3 Do amplo ao específico
 *Mostre o raciocínio de delimitação — como vocês chegaram do tema amplo ao tema específico.*
@@ -57,7 +64,7 @@ Algoritmos de caminho mínimo em grafos, como o Dijkstra, são usados em uma qua
 ### 3.3 Originalidade / Não-redundância
 *O grupo verificou rapidamente (via um levantamento preliminar) se o tema já é excessivamente explorado ou se existe um ângulo próprio a ser explorado?*
 
-O algoritmo de Dijkstra em si já é amplamente documentado na literatura, mas o ângulo próprio do grupo está em analisá-lo dentro de um sistema real e já implementado pelo próprio grupo, o Player2, em vez de partir de um cenário puramente teórico ou de dados sintéticos genéricos. Isso permite fazer uma análise empírica com dados e código reais.
+O algoritmo de Dijkstra em si já é amplamente documentado na literatura, e é justamente essa literatura que forma a base do trabalho. O ângulo próprio do grupo aparece na parte complementar: depois de revisar o que os artigos dizem sobre a complexidade do algoritmo, o grupo confronta essas conclusões com medições feitas no Player2, um sistema real e já implementado pelo próprio grupo, em vez de ficar só no cenário teórico ou em dados sintéticos genéricos.
 
 ---
 
@@ -65,7 +72,7 @@ O algoritmo de Dijkstra em si já é amplamente documentado na literatura, mas o
 
 | Campo | Informação |
 |---|---|
-| Data da conversa/validação | `[dd/mm/aaaa]` |
+| Data da conversa/validação | 11/09/2026 |
 | Tema aprovado pelo orientador? | Sim, com ajustes |
 | Observações ou ajustes solicitados pelo orientador | A orientadora pediu para o grupo focar em apenas um dos dois sistemas, em vez de comparar afinidade e distância geográfica ao mesmo tempo. O grupo optou por seguir apenas com o Player2 (grafo de afinidade) |
 
@@ -78,17 +85,17 @@ O algoritmo de Dijkstra em si já é amplamente documentado na literatura, mas o
 ### Integrante 1 — Daniel Vieira Santos
 - **O que fez nesta etapa:** Pesquisas e Associações com projetos passados
 - **Tempo dedicado (aprox.):** 2h30min
-- **Evidência da contribuição** 
+- **Evidência da contribuição:** envio do documento ao repositório do grupo (commit f463e7e, 10/09/2026): https://github.com/Dannzinho/Complexidade-do-Algoritmo-de-Dijkstra-em-Grafo-de-Afinidade/commit/f463e7e
 
 ### Integrante 2 — Kevin dos Santos Vieira
 - **O que fez nesta etapa:** Pesquisas e validação das informações
 - **Tempo dedicado (aprox.):** 2h30min
-- **Evidência da contribuição:** 
+- **Evidência da contribuição:** tema delimitado e justificativa (seções 2 e 3) registrados no documento do repositório: [a_Escolha_do_Tema.md](https://github.com/Dannzinho/Complexidade-do-Algoritmo-de-Dijkstra-em-Grafo-de-Afinidade/blob/main/a_Escolha_do_Tema.md)
 
 ### Integrante 3 — Eduardo Alves dos Reis
 - **O que fez nesta etapa:** Preenchimento da documentação
 - **Tempo dedicado (aprox.):** 1h30min
-- **Evidência da contribuição:** 
+- **Evidência da contribuição:** documentação da etapa preenchida no repositório: [a_Escolha_do_Tema.md](https://github.com/Dannzinho/Complexidade-do-Algoritmo-de-Dijkstra-em-Grafo-de-Afinidade/blob/main/a_Escolha_do_Tema.md)
 
 ### 5.1 Quadro-resumo de participação
 

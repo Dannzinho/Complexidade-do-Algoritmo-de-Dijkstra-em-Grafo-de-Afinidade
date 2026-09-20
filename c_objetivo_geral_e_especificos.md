@@ -13,8 +13,18 @@
 | Projeto de Pesquisa / IC | Aplicação e análise de complexidade do algoritmo de caminho mínimo em grafos de afinidade |
 | Orientador(a) | Andrea Ono Sakai |
 | Data de entrega desta etapa | 12/09/2026 |
+| Revisão após parecer da orientadora | 19/09/2026 |
 | Integrantes do grupo | Daniel Vieira Santos, Kevin dos Santos Vieira, Eduardo Alves dos Reis |
 | Tema (da etapa "a") | Aplicação e análise de complexidade do algoritmo de caminho mínimo em grafos (Dijkstra) no Player2, aplicativo de recomendação que sugere usuários com maior afinidade entre si. O foco é entender como o algoritmo se comporta à medida que o grafo de afinidade cresce, comparando o crescimento teórico previsto pela notação assintótica com o tempo de execução medido na prática. |
+
+### O que é revisão da literatura e o que é medição no Player2
+
+| Parte do trabalho | O que entra | De onde vem | Peso no trabalho |
+|---|---|---|---|
+| Revisão da literatura | Complexidade teórica do Dijkstra, papel da fila de prioridade, avanços recentes no problema do caminho mínimo e resultados de estudos que já mediram o algoritmo na prática | Os 10 artigos selecionados na etapa (b) e o fichamento | Base da pesquisa, atende ao que a disciplina pede |
+| Medição no Player2 | Tempo de execução do Dijkstra do Player2 em grafos de afinidade de tamanhos crescentes | Experimento feito pelo próprio grupo | Complemento, estudo de caso que é comparado com a revisão |
+
+A medição não substitui o fichamento. Ela só entra depois da revisão, para verificar se o comportamento observado no Player2 bate com o que os artigos descrevem. Nos objetivos abaixo, cada item está marcado como **[Revisão]** ou **[Medição no Player2]**.
 
 ## PARTE 1 — DEFINIR O OBJETIVO GERAL
 
@@ -22,7 +32,7 @@
 
 **Pergunta:** Qual foi o tema específico que o grupo definiu?
 
-> Resposta: O grupo escolheu analisar a complexidade do algoritmo de Dijkstra aplicado a um grafo de afinidade entre usuários, usando como estudo de caso o Player2, aplicativo desenvolvido pelo próprio grupo que recomenda usuários com maior afinidade entre si.
+> Resposta: O grupo escolheu analisar, a partir da literatura, a complexidade do algoritmo de Dijkstra aplicado a grafos ponderados, usando como estudo de caso complementar o grafo de afinidade do Player2, aplicativo desenvolvido pelo próprio grupo que recomenda usuários com maior afinidade entre si.
 
 ### 1.2 Passo a passo para chegar ao objetivo geral
 
@@ -43,7 +53,7 @@ Reescrevam a pergunta como uma afirmação, usando um verbo no infinitivo.
 
 *Exemplo:* "Analisar os principais impactos da árvore de decisão em IA para definir estratégias de marketing para segmentação de clientes."
 
-> Resposta: Analisar a aplicação do algoritmo de Dijkstra em um grafo de afinidade entre usuários no sistema Player2, com o propósito de comparar o crescimento assintótico teórico com o tempo de execução medido empiricamente conforme o grafo aumenta de tamanho.
+> Resposta: Analisar, por meio de revisão da literatura, a complexidade do algoritmo de Dijkstra e a relação entre seu crescimento assintótico teórico e seu desempenho prático, com o propósito de confrontar essas conclusões com o tempo de execução medido no grafo de afinidade do Player2 conforme o grafo aumenta de tamanho.
 
 **Passo 4 — Ajustes finais**
 Revisem o objetivo geral seguindo os critérios abaixo:
@@ -68,7 +78,7 @@ Revisem o objetivo geral seguindo os critérios abaixo:
 
 **2) Qual o objetivo geral?**
 
-> Resposta: Analisar a aplicação do algoritmo de Dijkstra em um grafo de afinidade entre usuários no sistema Player2, com o propósito de comparar o crescimento assintótico teórico com o tempo de execução medido empiricamente conforme o grafo aumenta de tamanho.
+> Resposta: Analisar, por meio de revisão da literatura, a complexidade do algoritmo de Dijkstra e a relação entre seu crescimento assintótico teórico e seu desempenho prático, com o propósito de confrontar essas conclusões com o tempo de execução medido no grafo de afinidade do Player2 conforme o grafo aumenta de tamanho.
 
 ---
 
@@ -78,7 +88,7 @@ Revisem o objetivo geral seguindo os critérios abaixo:
 
 Copiem aqui o objetivo geral definido na Parte 1 (deve conceituar os assuntos abordados no tema).
 
-> Resposta: Analisar a aplicação do algoritmo de Dijkstra em um grafo de afinidade entre usuários no sistema Player2, com o propósito de comparar o crescimento assintótico teórico com o tempo de execução medido empiricamente conforme o grafo aumenta de tamanho.
+> Resposta: Analisar, por meio de revisão da literatura, a complexidade do algoritmo de Dijkstra e a relação entre seu crescimento assintótico teórico e seu desempenho prático, com o propósito de confrontar essas conclusões com o tempo de execução medido no grafo de afinidade do Player2 conforme o grafo aumenta de tamanho.
 
 ### 2.2 Assuntos da pesquisa
 
@@ -92,11 +102,11 @@ Escrevam de 4 a 5 assuntos que serão abordados na pesquisa.
 - Apresentar quais são os resultados das estratégias de marketing para segmentação de clientes sem e com IA
 
 **Assuntos do grupo:**
-1. Resposta: Conceituar o algoritmo de Dijkstra e sua complexidade assintótica
-2. Resposta: Conceituar grafos ponderados e sua aplicação em sistemas de recomendação por afinidade
-3. Resposta: Descrever como o Dijkstra foi implementado no grafo de afinidade do Player2
-4. Resposta: Medir empiricamente o tempo de execução do algoritmo em diferentes tamanhos de grafo
-5. Resposta: *(opcional)* Comparar os resultados empíricos obtidos com o crescimento teórico previsto pela notação assintótica
+1. Resposta: **[Revisão]** Conceituar o algoritmo de Dijkstra e sua complexidade assintótica, incluindo o papel da fila de prioridade
+2. Resposta: **[Revisão]** Levantar o que os estudos empíricos publicados mostram sobre a diferença entre a complexidade teórica e o tempo medido do Dijkstra
+3. Resposta: **[Revisão]** Conceituar grafos ponderados e sua aplicação em sistemas de recomendação por afinidade
+4. Resposta: **[Medição no Player2]** Descrever a implementação do Dijkstra no grafo de afinidade do Player2 e medir seu tempo de execução em diferentes tamanhos de grafo
+5. Resposta: **[Medição no Player2]** Comparar os tempos medidos no Player2 com o crescimento teórico e com os resultados levantados na revisão
 
 ### 2.3 Estrutura básica do artigo
 
@@ -113,10 +123,11 @@ Definam a estrutura do artigo, incluindo introdução e considerações finais.
 
 **Estrutura do grupo:**
 - Introdução
-- Resposta: Fundamentação teórica — o algoritmo de Dijkstra e a notação assintótica
-- Resposta: Grafos de afinidade em sistemas de recomendação
-- Resposta: Metodologia — implementação e ambiente de testes usados no Player2
-- Resposta: Resultados — análise empírica do tempo de execução em diferentes tamanhos de grafo
+- Resposta: Revisão da literatura: o algoritmo de Dijkstra, a notação assintótica e as filas de prioridade
+- Resposta: Revisão da literatura: estudos empíricos sobre o desempenho do Dijkstra
+- Resposta: Revisão da literatura: grafos de afinidade em sistemas de recomendação
+- Resposta: Estudo de caso (medição no Player2): implementação, ambiente de testes e tempos medidos
+- Resposta: Discussão: comparação entre os tempos medidos no Player2 e o que a literatura aponta
 - Considerações finais
 
 ### 2.4 Objetivos específicos classificados
@@ -135,13 +146,14 @@ Classifiquem os objetivos específicos em **Conceituais** e **Técnicos**.
 **Objetivos específicos do grupo:**
 
 - **Objetivos Conceituais**
-  - Resposta: Conceituar o algoritmo de Dijkstra e sua complexidade assintótica (notação O)
-  - Resposta: Conceituar grafos ponderados aplicados a sistemas de recomendação por afinidade
+  - Resposta: **[Revisão]** Conceituar o algoritmo de Dijkstra e sua complexidade assintótica (notação O), incluindo o impacto da fila de prioridade
+  - Resposta: **[Revisão]** Conceituar grafos ponderados aplicados a sistemas de recomendação por afinidade
+  - Resposta: **[Revisão]** Sintetizar o que os estudos empíricos publicados mostram sobre a relação entre complexidade teórica e tempo medido do Dijkstra
 
 - **Objetivos Técnicos**
-  - Resposta: Descrever a implementação do algoritmo de Dijkstra no grafo de afinidade do Player2
-  - Resposta: Medir empiricamente o tempo de execução do algoritmo em diferentes tamanhos de grafo
-  - Resposta: *(opcional)* Comparar os resultados obtidos empiricamente com o crescimento teórico previsto pela notação assintótica
+  - Resposta: **[Medição no Player2]** Descrever a implementação do algoritmo de Dijkstra no grafo de afinidade do Player2
+  - Resposta: **[Medição no Player2]** Medir o tempo de execução do algoritmo em diferentes tamanhos de grafo
+  - Resposta: **[Medição no Player2]** Comparar os tempos medidos com o crescimento teórico previsto pela notação assintótica e com os resultados levantados na revisão
 
 ---
 
@@ -153,3 +165,4 @@ Classifiquem os objetivos específicos em **Conceituais** e **Técnicos**.
 - [x] Foram listados de 4 a 5 assuntos do artigo
 - [x] A estrutura do artigo foi definida (introdução, desenvolvimento, considerações finais)
 - [x] Os objetivos específicos foram classificados em Conceituais e Técnicos
+- [x] Está explícito o que é revisão da literatura e o que é medição no Player2
